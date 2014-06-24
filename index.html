@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href='http://fonts.googleapis.com/css?family=Signika:300,700,600|Share+Tech+Mono' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+        </style>
+        <link rel="stylesheet" href="css/bootstrap-theme.css">
+        
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">Forge</a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+
+      <div class="row">
+        
+        
+        <div class="span4">
+          <!--<h2>Create</h2>-->
+          <div class="row">
+            <div class="span4">
+              <select id="create-options">
+                <option value="">option</option>
+              </select>
+              <a class="btn btn-primary" href="#" id="btn-start">Start!</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="span4" id="projects"></div>
+          </div>
+        </div>
+        
+        
+        
+        
+        <div class="span4">
+          <!--<h2>Heroes</h2>-->
+          <div class="row">
+            <div class="span4">
+              <select id="hero-options" class="span4">
+                <option value="">Henry Paddlesworth, Lvl. 1 Paladin</option>
+              </select>
+            </div>
+          </div>
+          
+          <div id="hero-info">
+            <div class="row">
+              <div class="span4">
+                <div class="progress progress-info progress-striped active">
+                  <div class="bar" style="width:70%"></div>
+                  <div class="progress-name">Experience</div>
+                  <div class="progress-amount">1,890 / 2,000</div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <table class="span4 table table-striped table-condensed">
+                <tbody>
+                  <tr class="weapon1">
+                    <td>Medium Armor</td>
+                    <td><select class="select-mini"><option value="">Copper Sword</option></select><div class="equipped"></div></td>
+                    <td><a class="btn btn-primary btn-mini btn-equip" href="#">Equip</a></td>
+                  </tr>
+                  <tr class="weapon2">
+                    <td>Medium Armor</td>
+                    <td><select class="select-mini"><option value="">Copper Sword</option></select><div class="equipped"></div></td>
+                    <td><a class="btn btn-primary btn-mini btn-equip" href="#">Equip</a></td>
+                  </tr>
+                  <tr class="shield">
+                    <td>Medium Armor</td>
+                    <td><select class="select-mini"><option value="">Copper Sword</option></select><div class="equipped"></div></td>
+                    <td><a class="btn btn-primary btn-mini btn-equip" href="#">Equip</a></td>
+                  </tr>
+                  <tr class="helm">
+                    <td>Medium Armor</td>
+                    <td><select class="select-mini"><option value="">Copper Sword</option></select><div class="equipped"></div></td>
+                    <td><a class="btn btn-primary btn-mini btn-equip" href="#">Equip</a></td>
+                  </tr>
+                  <tr class="armor">
+                    <td>Medium Armor</td>
+                    <td><select class="select-mini"><option value="">Copper Sword</option></select><div class="equipped"></div></td>
+                    <td><a class="btn btn-primary btn-mini btn-equip" href="#">Equip</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+          <hr>
+          
+          <div class="row">
+            <div class="span4">
+              <select class="span4" id="area-options"></select>
+            </div>
+            <div class="span4">
+              Chance of Success: <span id="success-chance">67%</span>
+              <a class="btn btn-primary pull-right" href="#" id="btn-quest">Quest!</a>
+            </div>
+          </div>
+          
+          <hr>
+          
+          <div class="row">
+            <div class="span4" id="quests">
+            </div>
+          </div>
+        </div>
+        
+        <div class="span4">
+          <!--<h2>Inventory</h2>-->
+          <div id="inventory"></div>
+        </div>
+        
+        
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; Brandon Barnes</p>
+      </footer>
+
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/data.items.js"></script>
+    <script src="js/data.heroes.js"></script>
+    <script src="js/data.areas.js"></script>
+    <script src="js/game.functions.js"></script>
+    <script src="js/main.js"></script>
+    </body>
+</html>
