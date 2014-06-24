@@ -13,6 +13,7 @@ $(document).ready(function() {
     {'material': 'Gold', 'type' : 'Katana'}
   ];
   
+  Game.addInventory('Gold', 100);
   Game.addInventory('Wood Sword', 1);
   
   Game.createHero("Warrior");
@@ -25,7 +26,9 @@ $(document).ready(function() {
   Game.rebuildHeroes();
   Game.rebuildHeroInfo();
   Game.rebuildAreas();
-  setInterval(Game.runGameLoop, 300);
+  
+  Game.setStartTime(Date.now());
+  setInterval(Game.runGameLoop, Game.loopInterval);
   
   //actions/events
   

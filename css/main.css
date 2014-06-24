@@ -31,6 +31,12 @@ select { vertical-align: top; }
 
 .btn-equip.disabled { background-color: #eee; color: #ccc; border-color: #eee; }
 
+#shopping {  }
+.shopping-item { border-bottom: 1px solid #999; padding: 9px 0 12px }
+.shopping-item .name { margin-bottom: 3px; }
+.shopping-item .item-name { font-weight: bold; color: #aa00aa; }
+.shopping-item .btn-decline { margin-left: 8px; }
+
 
 
 
