@@ -38,14 +38,12 @@
           <h2>Projects</h2>
           <div class="row">
             <div class="span4">
-              <select id="create-options">
-                <option value="">option</option>
-              </select>
-              <a class="btn btn-primary" href="#" id="btn-start">Start!</a>
+              <select id="create-options" class="span3"></select>
+              <a class="btn btn-primary " href="#" id="btn-start">Start!</a>
             </div>
           </div>
           <div class="row">
-            <div class="span4" id="projects"></div>
+            <div id="projects"></div>
           </div>
         </div>
         
@@ -53,95 +51,103 @@
         
         
         <div class="span4">
-          <h2>Heroes</h2>
-          
-          
-          <div id="shopping" class="row"></div>
-          
-          <hr>
-          
-          <div class="row">
-            <div class="span4">
-              <select id="hero-options" class="span4"></select>
+          <ul class="nav nav-tabs" id="middleTabs">
+            <li class="active"><a href="#shopping-section">Store</a></li>
+            <li><a href="#heroes-section">Heroes</a></li>
+            <li><a href="#blueprints-section">Blueprints</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div class="tab-pane active" id="shopping-section">
+              <div id="shopping" class="row"></div>
             </div>
-          </div>
-          
-          <div id="hero-info">
-            <div class="row">
-              <div class="span4">
-                <div class="progress progress-info progress-striped active">
-                  <div class="bar" style="width:70%"></div>
-                  <div class="progress-name">Experience</div>
-                  <div class="progress-amount">1,890 / 2,000</div>
+            
+            <div class="tab-pane" id="heroes-section">
+              <div class="row">
+                <div class="span4">
+                  <select id="hero-options" class="span4"></select>
+                </div>
+              </div>
+
+              <div id="hero-info">
+                <div class="row">
+                  <div class="span4">
+                    <div class="progress progress-info progress-striped active">
+                      <div class="bar" style="width:70%"></div>
+                      <div class="progress-name">Experience</div>
+                      <div class="progress-amount">1,890 / 2,000</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <table class="span4 table table-striped table-condensed">
+                    <tbody>
+                      <tr class="weapon1">
+                        <td>Medium Armor</td>
+                        <td><select class="select-mini"><option value="">Copper Sword</option></select><div class="equipped"></div></td>
+                        <td><a class="btn btn-primary btn-mini btn-equip" href="#">Equip</a></td>
+                      </tr>
+                      <tr class="weapon2">
+                        <td>Medium Armor</td>
+                        <td><select class="select-mini"><option value="">Copper Sword</option></select><div class="equipped"></div></td>
+                        <td><a class="btn btn-primary btn-mini btn-equip" href="#">Equip</a></td>
+                      </tr>
+                      <tr class="shield">
+                        <td>Medium Armor</td>
+                        <td><select class="select-mini"><option value="">Copper Sword</option></select><div class="equipped"></div></td>
+                        <td><a class="btn btn-primary btn-mini btn-equip" href="#">Equip</a></td>
+                      </tr>
+                      <tr class="helm">
+                        <td>Medium Armor</td>
+                        <td><select class="select-mini"><option value="">Copper Sword</option></select><div class="equipped"></div></td>
+                        <td><a class="btn btn-primary btn-mini btn-equip" href="#">Equip</a></td>
+                      </tr>
+                      <tr class="armor">
+                        <td>Medium Armor</td>
+                        <td><select class="select-mini"><option value="">Copper Sword</option></select><div class="equipped"></div></td>
+                        <td><a class="btn btn-primary btn-mini btn-equip" href="#">Equip</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <hr>
+
+              <div class="row">
+                <div class="span4">
+                  <select class="span4" id="area-options"></select>
+                </div>
+                <div class="span4">
+                  Chance of Success: <span id="success-chance">67%</span>
+                  <a class="btn btn-primary pull-right" href="#" id="btn-quest">Quest!</a>
+                </div>
+              </div>
+
+              <hr>
+
+              <div class="row">
+                <div class="span4" id="quests">
                 </div>
               </div>
             </div>
-            <div class="row">
-              <table class="span4 table table-striped table-condensed">
-                <tbody>
-                  <tr class="weapon1">
-                    <td>Medium Armor</td>
-                    <td><select class="select-mini"><option value="">Copper Sword</option></select><div class="equipped"></div></td>
-                    <td><a class="btn btn-primary btn-mini btn-equip" href="#">Equip</a></td>
-                  </tr>
-                  <tr class="weapon2">
-                    <td>Medium Armor</td>
-                    <td><select class="select-mini"><option value="">Copper Sword</option></select><div class="equipped"></div></td>
-                    <td><a class="btn btn-primary btn-mini btn-equip" href="#">Equip</a></td>
-                  </tr>
-                  <tr class="shield">
-                    <td>Medium Armor</td>
-                    <td><select class="select-mini"><option value="">Copper Sword</option></select><div class="equipped"></div></td>
-                    <td><a class="btn btn-primary btn-mini btn-equip" href="#">Equip</a></td>
-                  </tr>
-                  <tr class="helm">
-                    <td>Medium Armor</td>
-                    <td><select class="select-mini"><option value="">Copper Sword</option></select><div class="equipped"></div></td>
-                    <td><a class="btn btn-primary btn-mini btn-equip" href="#">Equip</a></td>
-                  </tr>
-                  <tr class="armor">
-                    <td>Medium Armor</td>
-                    <td><select class="select-mini"><option value="">Copper Sword</option></select><div class="equipped"></div></td>
-                    <td><a class="btn btn-primary btn-mini btn-equip" href="#">Equip</a></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          
-          <hr>
-          
-          <div class="row">
-            <div class="span4">
-              <select class="span4" id="area-options"></select>
-            </div>
-            <div class="span4">
-              Chance of Success: <span id="success-chance">67%</span>
-              <a class="btn btn-primary pull-right" href="#" id="btn-quest">Quest!</a>
-            </div>
-          </div>
-          
-          <hr>
-          
-          <div class="row">
-            <div class="span4" id="quests">
+            <div class="tab-pane" id="blueprints-section">
+              blueprints...
             </div>
           </div>
         </div>
         
         <div class="span4">
-          <!--<h2>Inventory</h2>-->
+          <h2>Inventory</h2>
           <div id="inventory"></div>
+          <h2>Info</h2>
+          <div id="info">
+            Workers: 0<br>
+          </div>
         </div>
         
         
       </div>
-
-      <hr>
-
-      <footer>
-        <p>&copy; Brandon Barnes</p>
-      </footer>
 
     </div>
 
@@ -161,7 +167,5 @@
     <script src="js/projects.js"></script>
     <script src="js/inventory.js"></script>
     <script src="js/shopping.js"></script>
-    
-    <script src="js/main.js"></script>
     </body>
 </html>

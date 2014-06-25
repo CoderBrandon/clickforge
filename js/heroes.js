@@ -95,3 +95,44 @@ Game.getHeroEquippableSlots = function(hero) {
   }
   return equippableSlots;
 };
+
+
+$(document).ready(function() {
+  $("#hero-options").on('change', function() {
+    Game.rebuildHeroInfo();
+  });
+  
+  //Equip Item
+  $("#hero-info").on('click', '.btn-equip', function() {
+    if($(this).hasClass('disabled') || $(this).hasClass('btn-remove')) {
+      return;
+    }
+    
+    var index = $('#hero-options').val();
+    var slot = $(this).parents('tr').attr('class');
+    var hero = Game.heroes[index];
+    var $info = $("#hero-info");
+    
+    hero.equipped[slot] = $info.find('tr.' + slot + ' select').val();
+    //$info.find('tr.' + slot + ' select').hide();
+    //$(this).text('Remove').addClass('btn-remove');
+    //$info.find('tr.' + slot + ' .equipped').show().text(hero.equipped[slot]);
+    Game.addInventory(hero.equipped[slot], -1);
+    Game.rebuildHeroInfo();
+  });
+  
+  //Remove Item
+  $("#hero-info").on('click', '.btn-remove', function() {
+    var index = $('#hero-options').val();
+    var slot = $(this).parents('tr').attr('class');
+    var hero = Game.heroes[index];
+    
+    var itemName = hero.equipped[slot];
+    hero.equipped[slot] = '';
+    //$info.find('tr.' + slot + ' select').show();
+    //$(this).text('Equip').removeClass('btn-remove');
+    //$info.find('tr.' + slot + ' .equipped').hide().text('');
+    Game.addInventory(itemName, 1);
+    Game.rebuildHeroInfo();
+  });
+});

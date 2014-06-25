@@ -2,6 +2,8 @@ body,select { font-family: 'Signika', sans-serif; }
 
 select { vertical-align: top; }
 
+.no-select { -moz-user-select: none; -webkit-user-select: none; -ms-user-select: none; }
+
 .select-mini { font-size: 12px; height: 22px; margin-bottom: 0px; }
 
 .progress { position: relative; }
@@ -22,7 +24,9 @@ select { vertical-align: top; }
 .progress-info .progress-amount, .progress-info .progress-name { top: 1px; }
 .progress-info .progress-name { font-size: 14px; }
 
-#projects .progress { cursor: pointer; }
+#btn-start { width: 50px; }
+#projects .progress { cursor: pointer; margin-left: 3px; width: 268px; }
+.btn-remove-project { width: 14px; }
 
 #hero-info .progress { margin-bottom: 0px; }
 #hero-info table { width: 94%; margin-top: 6px; }
@@ -35,8 +39,10 @@ select { vertical-align: top; }
 .shopping-item { border-bottom: 1px solid #999; padding: 9px 0 12px }
 .shopping-item .name { margin-bottom: 3px; }
 .shopping-item .item-name { font-weight: bold; color: #aa00aa; }
-.shopping-item .btn-decline { margin-left: 8px; }
+.shopping-item .btn-create, .shopping-item .btn-decline { margin-left: 8px; }
 
+
+#inventory { font-size: 16px; }
 
 
 

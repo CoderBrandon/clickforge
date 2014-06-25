@@ -1,25 +1,29 @@
 /**
  * 
  */
-Game.goShopping = function(elapsed) {
+Game.goShopping = function(elapsed, trysLeft) {
+  if(trysLeft <= 0) {
+    return;
+  }
+  
   if(Game.shoppers.length >= Game.maxShoppers) {
     return;
   }
   
   var hero = Game.randomInArray(Game.heroes);
   if(Game.heroIsShopping(hero)) {
-    return;
+    return Game.goShopping(elapsed, trysLeft - 1);
   }
   
   var slot = Game.randomInArray(Game.getHeroEquippableSlots(hero));
   var type = hero.template[slot];
   if(type === '') {
-    return;
+    return Game.goShopping(elapsed, trysLeft - 1);
   }
   
   var blueprints = Game.getBlueprintsByType(type);
   if(blueprints.length <= 0) {
-    return;
+    return Game.goShopping(elapsed, trysLeft - 1);
   }
   
   var blueprint = Game.randomInArray(blueprints);
@@ -62,6 +66,7 @@ Game.addShopper = function(hero, slot, type, blueprint) {
   $shopper.slideUp(0).slideDown();
   
   Game.rebuildShoppers();
+  Game.rebuildHeroInfo();
 };
 
 /**
@@ -85,7 +90,6 @@ $(document).ready(function() {
    * 
    */
   $('#shopping').on('click', '.btn-sell', function() {
-    console.log('sell');
     if($(this).hasClass('disabled')) {
       return;
     }
@@ -97,19 +101,27 @@ $(document).ready(function() {
     Game.addInventory(itemName, -1);
     shopper.hero.equipped[shopper.slot] = itemName;
     Game.shoppers.splice(Game.shoppers.indexOf(shopper), 1);
-    $shoppingItem.remove();
+    $shoppingItem.slideUp(300, function() { $(this).remove(); });
+    Game.rebuildShoppers();
   });
   
   /**
    * 
    */
   $('#shopping').on('click', '.btn-decline', function() {
-    console.log('decline');
-    
     var $shoppingItem = $(this).parents('.shopping-item');
     var shopper = $shoppingItem.data('shopper');
     Game.shoppers.splice(Game.shoppers.indexOf(shopper), 1);
-    $shoppingItem.remove();
+    $shoppingItem.slideUp(300, function() { $(this).remove(); });
+  });
+  
+  /**
+   * 
+   */
+  $('#shopping').on('click', '.btn-create', function() {
+    var $shoppingItem = $(this).parents('.shopping-item');
+    var shopper = $shoppingItem.data('shopper');
+    Game.startProject(shopper.blueprint);
   });
   
   

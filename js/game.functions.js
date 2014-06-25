@@ -1,8 +1,6 @@
-
-
-  
-
-
+/**
+ * 
+ */
 Game.rebuildAreas = function() {
   var html = '';
   for (var i = 0; i < Game.areas.length; i++) {
@@ -12,6 +10,9 @@ Game.rebuildAreas = function() {
   $('#area-options').html(html);
 };
 
+/**
+ * 
+ */
 Game.rebuildSuccessChance = function() {
   //chance of success based on: Hero Lvl, Hero Success Rate, Area Level, Hero avg equipment material
   //HSR / (AreaLVL / ((HLVL + AvgMatLvl)/2))
@@ -33,7 +34,6 @@ Game.rebuildSuccessChance = function() {
       if(hero.equipped[slots[i]]) {
         var material = hero.equipped[slots[i]].split(' ')[0];
         equipMatSum += Game.materials[material].cost;
-        console.log(material);
       }
     }
   }

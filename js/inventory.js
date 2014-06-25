@@ -38,6 +38,9 @@ Game.addInventory = function(name, amount) {
   
 };
 
+/**
+ * 
+ */
 Game.getInventoryItemAmount = function(name) {
   return Game.inventory[name] || 0;
 };
